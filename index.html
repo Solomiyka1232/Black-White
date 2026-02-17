@@ -5,23 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>RED&HeLL FAMILY — UA ONLINE</title>
+  <title>Black&White FAMILY — UA ONLINE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
   <style>
     /* ==================== CUSTOM PROPERTIES ==================== */
     :root {
-      --orange-neon: #e8711a;
-      --orange-glow: #d4842e;
-      --orange-deep: #c05a10;
-      --orange-soft: #cc7a30;
-      --black-deep: #0c0c0c;
-      --black-card: #131313;
-      --black-surface: #1c1c1c;
-      --text-heading: #e0d6cc;
-      --text-body: #a09890;
-      --text-muted: #6a6560;
+      --blue-neon: #1a8aff;
+      --blue-glow: #2e7ad4;
+      --blue-deep: #1060c0;
+      --blue-soft: #3080cc;
+      --blue-light: #4a9aee;
+      --black-deep: #080a0f;
+      --black-card: #0e1118;
+      --black-surface: #141820;
+      --text-heading: #ccd6e8;
+      --text-body: #8898b0;
+      --text-muted: #556078;
     }
 
     /* ==================== RESET & BASE ==================== */
@@ -43,7 +44,7 @@
     /* ==================== SCROLLBAR ==================== */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--black-deep); }
-    ::-webkit-scrollbar-thumb { background: var(--orange-neon); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb { background: var(--blue-neon); border-radius: 3px; }
 
     /* ==================== UTILITY ==================== */
     .hidden { display: none !important; }
@@ -54,7 +55,7 @@
     .particle {
       position: absolute;
       width: 3px; height: 3px;
-      background: var(--orange-neon);
+      background: var(--blue-neon);
       border-radius: 50%;
       opacity: 0;
       pointer-events: none;
@@ -79,12 +80,12 @@
       width: 100%; height: 100%;
     }
     .glitch-text::before {
-      color: rgba(200, 80, 40, 0.4);
+      color: rgba(40, 80, 200, 0.4);
       animation: glitchBefore 4s infinite;
       clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
     }
     .glitch-text::after {
-      color: rgba(180, 120, 70, 0.3);
+      color: rgba(70, 120, 180, 0.3);
       animation: glitchAfter 4s infinite;
       clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
     }
@@ -118,14 +119,14 @@
     /* ==================== NEON GLOW ==================== */
     .neon-glow {
       text-shadow:
-        0 0 8px rgba(232, 113, 26, 0.35),
-        0 0 20px rgba(232, 113, 26, 0.15),
-        0 0 40px rgba(192, 90, 16, 0.08);
+        0 0 8px rgba(26, 138, 255, 0.35),
+        0 0 20px rgba(26, 138, 255, 0.15),
+        0 0 40px rgba(16, 96, 192, 0.08);
       animation: neonPulse 3s ease-in-out infinite alternate;
     }
     @keyframes neonPulse {
-      from { text-shadow: 0 0 8px rgba(232,113,26,0.35), 0 0 20px rgba(232,113,26,0.15); }
-      to { text-shadow: 0 0 12px rgba(232,113,26,0.45), 0 0 30px rgba(232,113,26,0.2), 0 0 50px rgba(192,90,16,0.1); }
+      from { text-shadow: 0 0 8px rgba(26,138,255,0.35), 0 0 20px rgba(26,138,255,0.15); }
+      to { text-shadow: 0 0 12px rgba(26,138,255,0.45), 0 0 30px rgba(26,138,255,0.2), 0 0 50px rgba(16,96,192,0.1); }
     }
 
     /* ==================== WELCOME REVEAL ==================== */
@@ -199,8 +200,8 @@
     /* ==================== BG ELEMENTS ==================== */
     .bg-grid {
       background-image:
-        linear-gradient(rgba(255,106,0,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,106,0,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(26,138,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,138,255,0.03) 1px, transparent 1px);
       background-size: 60px 60px;
     }
     .ambient-orb {
@@ -226,8 +227,8 @@
     .smoke-layer {
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse at 20% 80%, rgba(255,106,0,0.05) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(255,106,0,0.03) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 80%, rgba(26,138,255,0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(26,138,255,0.03) 0%, transparent 50%);
       pointer-events: none;
       animation: smokeFloat 8s ease-in-out infinite alternate;
     }
@@ -240,10 +241,10 @@
     .btn-glow {
       position: relative; overflow: hidden;
       transition: all 0.3s ease;
-      box-shadow: 0 0 12px rgba(232,113,26,0.2);
+      box-shadow: 0 0 12px rgba(26,138,255,0.2);
     }
     .btn-glow:hover {
-      box-shadow: 0 0 16px rgba(232,113,26,0.35), 0 0 32px rgba(232,113,26,0.15);
+      box-shadow: 0 0 16px rgba(26,138,255,0.35), 0 0 32px rgba(26,138,255,0.15);
       transform: translateY(-2px);
     }
     .btn-glow:active { transform: scale(0.95); }
@@ -251,7 +252,7 @@
       content: '';
       position: absolute; top: -50%; left: -50%;
       width: 200%; height: 200%;
-      background: radial-gradient(circle, rgba(232,113,26,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(26,138,255,0.08) 0%, transparent 70%);
       animation: btnPulseGlow 3s ease-in-out infinite;
     }
     @keyframes btnPulseGlow {
@@ -259,27 +260,27 @@
       50% { transform: scale(1.05); opacity: 0.5; }
     }
     .tg-button {
-      background: linear-gradient(135deg, var(--orange-neon), var(--orange-deep));
+      background: linear-gradient(135deg, var(--blue-neon), var(--blue-deep));
       transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-      box-shadow: 0 4px 16px rgba(232,113,26,0.2);
+      box-shadow: 0 4px 16px rgba(26,138,255,0.2);
     }
     .tg-button:hover {
-      box-shadow: 0 6px 24px rgba(232,113,26,0.35);
+      box-shadow: 0 6px 24px rgba(26,138,255,0.35);
       transform: translateY(-3px) scale(1.02);
     }
     .tg-button:active { transform: scale(0.97); }
 
     /* ==================== FEATURE CARDS ==================== */
     .feature-card {
-      background: linear-gradient(135deg, #131313 0%, #1a1a1a 100%);
-      border: 1px solid rgba(232,113,26,0.07);
+      background: linear-gradient(135deg, #0e1118 0%, #141820 100%);
+      border: 1px solid rgba(26,138,255,0.07);
       transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
       border-radius: 12px;
       padding: 24px;
     }
     .feature-card:hover {
-      border-color: rgba(232,113,26,0.3);
-      box-shadow: 0 8px 32px rgba(232,113,26,0.08);
+      border-color: rgba(26,138,255,0.3);
+      box-shadow: 0 8px 32px rgba(26,138,255,0.08);
       transform: translateY(-4px);
     }
     .icon-wrap {
@@ -287,24 +288,24 @@
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(232,113,26,0.08) 0%, transparent 70%);
-      border: 1.5px solid rgba(232,113,26,0.18);
-      color: #d4944a;
-      box-shadow: 0 0 20px rgba(232,113,26,0.06);
+      background: radial-gradient(circle, rgba(26,138,255,0.08) 0%, transparent 70%);
+      border: 1.5px solid rgba(26,138,255,0.18);
+      color: #4a80b4;
+      box-shadow: 0 0 20px rgba(26,138,255,0.06);
       transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
     }
     .feature-card:hover .icon-wrap {
-      color: var(--orange-neon);
-      border-color: rgba(232,113,26,0.45) !important;
-      box-shadow: 0 0 18px rgba(232,113,26,0.2), inset 0 0 12px rgba(232,113,26,0.06) !important;
+      color: var(--blue-neon);
+      border-color: rgba(26,138,255,0.45) !important;
+      box-shadow: 0 0 18px rgba(26,138,255,0.2), inset 0 0 12px rgba(26,138,255,0.06) !important;
       transform: scale(1.1) rotate(5deg);
-      background: radial-gradient(circle, rgba(232,113,26,0.14) 0%, transparent 70%) !important;
+      background: radial-gradient(circle, rgba(26,138,255,0.14) 0%, transparent 70%) !important;
     }
 
     /* ==================== CROWN ==================== */
     .crown-icon {
-      color: var(--orange-neon);
-      filter: drop-shadow(0 0 6px rgba(232,113,26,0.3));
+      color: var(--blue-neon);
+      filter: drop-shadow(0 0 6px rgba(26,138,255,0.3));
       animation: crownFloat 3s ease-in-out infinite;
     }
     @keyframes crownFloat {
@@ -327,19 +328,19 @@
     /* ==================== SOUND TOGGLE ==================== */
     .sound-toggle {
       position: fixed; top: 16px; right: 16px; z-index: 100;
-      background: rgba(20,20,20,0.9);
+      background: rgba(14,17,24,0.9);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(232,113,26,0.15);
+      border: 1px solid rgba(26,138,255,0.15);
       border-radius: 50%;
       width: 44px; height: 44px;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer; transition: all 0.3s ease;
-      color: #c08050;
+      color: #4a80b4;
     }
     .sound-toggle:hover {
-      border-color: rgba(232,113,26,0.4);
-      box-shadow: 0 0 12px rgba(232,113,26,0.15);
+      border-color: rgba(26,138,255,0.4);
+      box-shadow: 0 0 12px rgba(26,138,255,0.15);
     }
 
     /* ==================== CINEMA BARS ==================== */
@@ -352,7 +353,7 @@
     /* ==================== PULSE RING ==================== */
     .pulse-ring {
       position: absolute; border-radius: 50%;
-      border: 1px solid rgba(232,113,26,0.15);
+      border: 1px solid rgba(26,138,255,0.15);
       animation: pulseRing 3s ease-out infinite;
     }
     @keyframes pulseRing {
@@ -366,7 +367,7 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       overflow: hidden;
-      background: #0c0c0c;
+      background: var(--black-deep);
       transition: opacity 0.9s ease, transform 0.9s ease;
     }
     #welcome-screen.exiting { opacity: 0; transform: scale(1.05); }
@@ -379,14 +380,32 @@
     #join-page {
       min-height: 100vh;
       display: flex; flex-direction: column;
-      background: #0c0c0c;
+      background: var(--black-deep);
       transition: opacity 0.7s ease;
+    }
+
+    /* ==================== B&W LOGO SPECIAL ==================== */
+    .bw-black { color: #ccd6e8; }
+    .bw-amp { color: #556078; }
+    .bw-white { color: var(--blue-neon); }
+
+    /* ==================== DIAGONAL STRIPE BG ==================== */
+    .diagonal-stripes {
+      position: absolute; inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 80px,
+        rgba(26,138,255,0.015) 80px,
+        rgba(26,138,255,0.015) 82px
+      );
     }
 
     /* ==================== RESPONSIVE ==================== */
     @media (max-width: 640px) {
-      .welcome-title { font-size: 2.5rem !important; }
-      .welcome-family { font-size: 1.5rem !important; }
+      .welcome-title { font-size: 2.2rem !important; }
+      .welcome-family { font-size: 1.3rem !important; }
       .hero-title { font-size: 2rem !important; }
       .features-grid { grid-template-columns: 1fr !important; }
       .cta-box { padding: 40px 24px !important; }
@@ -408,12 +427,15 @@
 <!-- ============================================================ -->
 <div id="welcome-screen">
   <!-- Ambient Orbs -->
-  <div class="ambient-orb" style="width:500px;height:500px;background:#e8711a;top:20%;left:30%;"></div>
-  <div class="ambient-orb" style="width:400px;height:400px;background:#c05a10;bottom:10%;right:20%;animation-delay:3s;"></div>
+  <div class="ambient-orb" style="width:500px;height:500px;background:#1a8aff;top:20%;left:30%;"></div>
+  <div class="ambient-orb" style="width:400px;height:400px;background:#1060c0;bottom:10%;right:20%;animation-delay:3s;"></div>
+  <div class="ambient-orb" style="width:300px;height:300px;background:#4a9aee;top:60%;left:60%;animation-delay:6s;"></div>
   <!-- Scanlines -->
   <div class="scanlines"></div>
   <!-- Grid -->
   <div class="bg-grid" style="position:absolute;inset:0;opacity:0.6;"></div>
+  <!-- Diagonal stripes -->
+  <div class="diagonal-stripes"></div>
   <!-- Vignette -->
   <div style="position:absolute;inset:0;box-shadow:inset 0 0 200px rgba(0,0,0,0.9);pointer-events:none;"></div>
   <!-- Particles container -->
@@ -422,32 +444,32 @@
   <!-- Main content — circle reveal -->
   <div id="welcome-content" class="opacity-0" style="position:relative;z-index:10;padding:0 24px;text-align:center;">
     <!-- "Вас приветствует" -->
-    <div id="welcome-subtitle" class="opacity-0" style="margin-bottom:24px;color:#8a8580;">
+    <div id="welcome-subtitle" class="opacity-0" style="margin-bottom:24px;color:#556078;">
       <span style="font-size:0.75rem;font-weight:300;text-transform:uppercase;letter-spacing:0.1em;">Вас приветствует</span>
     </div>
-    <!-- RED&HeLL -->
+    <!-- Black&White -->
     <h1 id="welcome-main-title" class="glitch-text neon-glow welcome-title opacity-0"
-        data-text="RED&HeLL"
-        style="color:#e8711a;font-size:4rem;font-weight:900;letter-spacing:0.05em;">
-      RED&HeLL
+        data-text="Black&White"
+        style="color:var(--blue-neon);font-size:4rem;font-weight:900;letter-spacing:0.03em;">
+      <span class="bw-black">Black</span><span class="bw-amp">&</span><span class="bw-white">White</span>
     </h1>
     <!-- FAMILY -->
     <div id="welcome-family" class="welcome-family opacity-0"
-         style="margin-top:12px;font-size:2rem;font-weight:700;letter-spacing:0.5em;color:#e0d6cc;">
+         style="margin-top:12px;font-size:2rem;font-weight:700;letter-spacing:0.5em;color:#ccd6e8;">
       FAMILY
     </div>
     <!-- Divider -->
     <div id="welcome-divider" class="opacity-0"
-         style="margin:32px auto 0;height:1px;width:192px;background:linear-gradient(90deg,transparent,rgba(232,113,26,0.4),transparent);transform:scaleX(0);"></div>
+         style="margin:32px auto 0;height:1px;width:192px;background:linear-gradient(90deg,transparent,rgba(26,138,255,0.4),transparent);transform:scaleX(0);"></div>
     <!-- Tagline -->
     <p id="welcome-tagline" class="opacity-0"
-       style="margin-top:24px;font-size:0.75rem;letter-spacing:0.25em;text-transform:uppercase;color:#6a6560;">
+       style="margin-top:24px;font-size:0.75rem;letter-spacing:0.25em;text-transform:uppercase;color:#556078;">
       Элитное братство • UA ONLINE
     </p>
     <!-- Enter button -->
     <button id="welcome-enter-btn" class="btn-glow opacity-0"
             onclick="enterSite()"
-            style="margin-top:56px;border-radius:6px;border:1px solid rgba(232,113,26,0.25);background:linear-gradient(135deg,rgba(232,113,26,0.08) 0%,rgba(232,113,26,0.03) 100%);color:#d4a574;padding:16px 48px;font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.25em;">
+            style="margin-top:56px;border-radius:6px;border:1px solid rgba(26,138,255,0.25);background:linear-gradient(135deg,rgba(26,138,255,0.08) 0%,rgba(26,138,255,0.03) 100%);color:#6aa0d4;padding:16px 48px;font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.25em;">
       <span style="position:relative;z-index:10;display:inline-flex;align-items:center;gap:12px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
@@ -482,12 +504,14 @@
   <!-- Hero Section -->
   <section style="position:relative;display:flex;min-height:60vh;align-items:center;justify-content:center;overflow:hidden;padding:80px 16px;">
     <div class="bg-grid" style="position:absolute;inset:0;opacity:0.6;"></div>
-    <div class="ambient-orb" style="width:400px;height:400px;background:#e8711a;top:10%;right:20%;"></div>
+    <div class="diagonal-stripes"></div>
+    <div class="ambient-orb" style="width:400px;height:400px;background:#1a8aff;top:10%;right:20%;"></div>
+    <div class="ambient-orb" style="width:300px;height:300px;background:#1060c0;bottom:20%;left:10%;animation-delay:4s;"></div>
     <div style="position:absolute;inset:0;box-shadow:inset 0 0 200px rgba(0,0,0,0.85);pointer-events:none;"></div>
 
     <div class="home-hero-enter" style="position:relative;z-index:10;max-width:56rem;margin:0 auto;text-align:center;">
       <!-- Badge -->
-      <div class="home-stagger-1" style="margin-bottom:24px;display:inline-flex;align-items:center;gap:8px;border-radius:9999px;border:1px solid rgba(232,113,26,0.15);background:rgba(232,113,26,0.04);padding:8px 20px;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.3em;color:#c08050;">
+      <div class="home-stagger-1" style="margin-bottom:24px;display:inline-flex;align-items:center;gap:8px;border-radius:9999px;border:1px solid rgba(26,138,255,0.15);background:rgba(26,138,255,0.04);padding:8px 20px;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.3em;color:#4a80b4;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           <polyline points="9 12 11 14 15 10"/>
@@ -496,14 +520,14 @@
       </div>
       <!-- Title -->
       <h1 class="home-stagger-2 hero-title" style="margin-bottom:16px;font-size:3.5rem;font-weight:900;letter-spacing:-0.02em;">
-        <span style="color:#e8711a;">RED&HeLL</span>
-        <span style="color:#e0d6cc;"> FAMILY</span>
+        <span class="bw-black">Black</span><span style="color:#556078;">&</span><span class="bw-white">White</span>
+        <span style="color:#ccd6e8;"> FAMILY</span>
       </h1>
       <!-- Divider -->
-      <div class="home-stagger-3" style="margin:0 auto 32px;height:1px;width:96px;background:linear-gradient(90deg,transparent,rgba(232,113,26,0.35),transparent);"></div>
+      <div class="home-stagger-3" style="margin:0 auto 32px;height:1px;width:96px;background:linear-gradient(90deg,transparent,rgba(26,138,255,0.35),transparent);"></div>
       <!-- Subtitle -->
-      <p class="home-stagger-3" style="max-width:40rem;margin:0 auto;font-size:1.1rem;line-height:1.7;color:#a09890;">
-        Это не просто семья. <span style="font-weight:600;color:#d4c4b0;">Это элитное братство</span>, где уважают силу и верность. Каждый имеет значение.
+      <p class="home-stagger-3" style="max-width:40rem;margin:0 auto;font-size:1.1rem;line-height:1.7;color:#8898b0;">
+        Это не просто семья. <span style="font-weight:600;color:#b0c0d8;">Это элитное братство</span>, где уважают силу и верность. Каждый имеет значение.
       </p>
     </div>
   </section>
@@ -511,9 +535,9 @@
   <!-- Leader Section -->
   <section style="position:relative;padding:64px 16px;">
     <div style="max-width:56rem;margin:0 auto;">
-      <div class="fade-in-up" style="max-width:28rem;margin:0 auto;overflow:hidden;border-radius:12px;padding:32px;text-align:center;background:linear-gradient(135deg,#141414 0%,#1a1a1a 100%);border:1px solid rgba(232,113,26,0.1);position:relative;animation-delay:0.2s;">
+      <div class="fade-in-up" style="max-width:28rem;margin:0 auto;overflow:hidden;border-radius:12px;padding:32px;text-align:center;background:linear-gradient(135deg,#0e1118 0%,#141820 100%);border:1px solid rgba(26,138,255,0.1);position:relative;animation-delay:0.2s;">
         <!-- Glow behind -->
-        <div style="position:absolute;top:-40px;left:50%;transform:translateX(-50%);height:80px;width:160px;background:radial-gradient(ellipse,rgba(232,113,26,0.08) 0%,transparent 70%);pointer-events:none;"></div>
+        <div style="position:absolute;top:-40px;left:50%;transform:translateX(-50%);height:80px;width:160px;background:radial-gradient(ellipse,rgba(26,138,255,0.08) 0%,transparent 70%);pointer-events:none;"></div>
         <div style="position:relative;z-index:10;">
           <!-- Crown Icon -->
           <div class="crown-icon" style="margin:0 auto 16px;display:flex;justify-content:center;">
@@ -521,8 +545,8 @@
               <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/>
             </svg>
           </div>
-          <p style="margin-bottom:4px;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.3em;color:#6a6560;">Наш лидер</p>
-          <h2 style="font-size:1.75rem;font-weight:900;color:#e8711a;">Ghost_Hanter</h2>
+          <p style="margin-bottom:4px;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.3em;color:#556078;">Наш лидер</p>
+          <h2 style="font-size:1.75rem;font-weight:900;color:var(--blue-neon);">Maksym_Kukhta</h2>
         </div>
       </div>
     </div>
@@ -532,10 +556,10 @@
   <section id="features-section" style="position:relative;padding:64px 16px;">
     <div style="max-width:64rem;margin:0 auto;">
       <div style="margin-bottom:48px;text-align:center;">
-        <h2 style="margin-bottom:12px;font-size:1.75rem;font-weight:700;color:#e0d6cc;">
-          Что ты <span style="color:#e8711a;">получаешь</span>
+        <h2 style="margin-bottom:12px;font-size:1.75rem;font-weight:700;color:#ccd6e8;">
+          Что ты <span style="color:var(--blue-neon);">получаешь</span>
         </h2>
-        <p style="font-size:0.875rem;color:#6a6560;">Вступая в семью RED&HeLL</p>
+        <p style="font-size:0.875rem;color:#556078;">Вступая в семью Black&White</p>
       </div>
 
       <div id="features-grid" class="features-grid" style="display:grid;gap:16px;">
@@ -549,9 +573,9 @@
                 <path d="M6 12h.01M18 12h.01"/>
               </svg>
             </div>
-            <h3 style="font-size:1rem;font-weight:700;color:#d4c4b0;">Высокая зарплата</h3>
+            <h3 style="font-size:1rem;font-weight:700;color:#b0c0d8;">Высокая зарплата</h3>
           </div>
-          <p style="font-size:0.875rem;line-height:1.6;color:#8a8580;">Стабильный и достойный доход для каждого члена семьи</p>
+          <p style="font-size:0.875rem;line-height:1.6;color:#6a7a90;">Стабильный и достойный доход для каждого члена семьи</p>
         </div>
 
         <!-- Feature 2 — Handshake -->
@@ -567,9 +591,9 @@
                 <path d="m8 16 1.5 1.5"/>
               </svg>
             </div>
-            <h3 style="font-size:1rem;font-weight:700;color:#d4c4b0;">Сильный коллектив</h3>
+            <h3 style="font-size:1rem;font-weight:700;color:#b0c0d8;">Сильный коллектив</h3>
           </div>
-          <p style="font-size:0.875rem;line-height:1.6;color:#8a8580;">Сплочённая команда, готовая поддержать в любой момент</p>
+          <p style="font-size:0.875rem;line-height:1.6;color:#6a7a90;">Сплочённая команда, готовая поддержать в любой момент</p>
         </div>
 
         <!-- Feature 3 — Warehouse/Building -->
@@ -581,9 +605,9 @@
                 <path d="M6 18h12"/><path d="M6 14h12"/><path d="M6 10h12"/>
               </svg>
             </div>
-            <h3 style="font-size:1rem;font-weight:700;color:#d4c4b0;">Надёжная крыша</h3>
+            <h3 style="font-size:1rem;font-weight:700;color:#b0c0d8;">Надёжная крыша</h3>
           </div>
-          <p style="font-size:0.875rem;line-height:1.6;color:#8a8580;">Полная защита и безопасность каждого из наших</p>
+          <p style="font-size:0.875rem;line-height:1.6;color:#6a7a90;">Полная защита и безопасность каждого из наших</p>
         </div>
 
         <!-- Feature 4 — Gauge/Speed -->
@@ -595,9 +619,9 @@
                 <path d="M3.34 19a10 10 0 1 1 17.32 0"/>
               </svg>
             </div>
-            <h3 style="font-size:1rem;font-weight:700;color:#d4c4b0;">Роскошный автопарк</h3>
+            <h3 style="font-size:1rem;font-weight:700;color:#b0c0d8;">Роскошный автопарк</h3>
           </div>
-          <p style="font-size:0.875rem;line-height:1.6;color:#8a8580;">Только лучшие машины для членов семьи</p>
+          <p style="font-size:0.875rem;line-height:1.6;color:#6a7a90;">Только лучшие машины для членов семьи</p>
         </div>
 
         <!-- Feature 5 — Flame -->
@@ -608,9 +632,9 @@
                 <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
               </svg>
             </div>
-            <h3 style="font-size:1rem;font-weight:700;color:#d4c4b0;">Статус и защита</h3>
+            <h3 style="font-size:1rem;font-weight:700;color:#b0c0d8;">Статус и защита</h3>
           </div>
-          <p style="font-size:0.875rem;line-height:1.6;color:#8a8580;">Уважение, влияние и непробиваемая оборона</p>
+          <p style="font-size:0.875rem;line-height:1.6;color:#6a7a90;">Уважение, влияние и непробиваемая оборона</p>
         </div>
       </div>
     </div>
@@ -618,21 +642,21 @@
 
   <!-- CTA Section -->
   <section id="cta-section" style="position:relative;padding:80px 16px;">
-    <div id="cta-box" class="cta-box opacity-0" style="position:relative;max-width:40rem;margin:0 auto;overflow:hidden;border-radius:16px;padding:56px;text-align:center;background:linear-gradient(135deg,#131313 0%,#181818 100%);border:1px solid rgba(232,113,26,0.1);">
+    <div id="cta-box" class="cta-box opacity-0" style="position:relative;max-width:40rem;margin:0 auto;overflow:hidden;border-radius:16px;padding:56px;text-align:center;background:linear-gradient(135deg,#0e1118 0%,#121620 100%);border:1px solid rgba(26,138,255,0.1);">
       <!-- Corner accents -->
-      <div style="position:absolute;left:0;top:0;height:48px;width:1px;background:linear-gradient(180deg,rgba(232,113,26,0.5),transparent);"></div>
-      <div style="position:absolute;left:0;top:0;height:1px;width:48px;background:linear-gradient(90deg,rgba(232,113,26,0.5),transparent);"></div>
-      <div style="position:absolute;bottom:0;right:0;height:48px;width:1px;background:linear-gradient(0deg,rgba(232,113,26,0.5),transparent);"></div>
-      <div style="position:absolute;bottom:0;right:0;height:1px;width:48px;background:linear-gradient(270deg,rgba(232,113,26,0.5),transparent);"></div>
+      <div style="position:absolute;left:0;top:0;height:48px;width:1px;background:linear-gradient(180deg,rgba(26,138,255,0.5),transparent);"></div>
+      <div style="position:absolute;left:0;top:0;height:1px;width:48px;background:linear-gradient(90deg,rgba(26,138,255,0.5),transparent);"></div>
+      <div style="position:absolute;bottom:0;right:0;height:48px;width:1px;background:linear-gradient(0deg,rgba(26,138,255,0.5),transparent);"></div>
+      <div style="position:absolute;bottom:0;right:0;height:1px;width:48px;background:linear-gradient(270deg,rgba(26,138,255,0.5),transparent);"></div>
 
-      <h2 class="cta-title" style="margin-bottom:16px;font-size:2rem;font-weight:900;color:#e0d6cc;">
-        Готов <span style="color:#e8711a;">вступить</span>?
+      <h2 class="cta-title" style="margin-bottom:16px;font-size:2rem;font-weight:900;color:#ccd6e8;">
+        Готов <span style="color:var(--blue-neon);">вступить</span>?
       </h2>
-      <p style="margin-bottom:32px;font-size:0.875rem;color:#8a8580;">
-        Стань частью элитного братства RED&HeLL FAMILY
+      <p style="margin-bottom:32px;font-size:0.875rem;color:#6a7a90;">
+        Стань частью элитного братства Black&White FAMILY
       </p>
       <button id="join-btn" onclick="handleJoinClick()" class="btn-glow"
-              style="display:inline-flex;align-items:center;gap:12px;border-radius:8px;padding:20px 56px;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:white;background:linear-gradient(135deg,#e8711a,#c05a10);border:none;">
+              style="display:inline-flex;align-items:center;gap:12px;border-radius:8px;padding:20px 56px;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:white;background:linear-gradient(135deg,#1a8aff,#1060c0);border:none;">
         <span>Вступить в семью</span>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition:transform 0.3s;">
           <line x1="5" y1="12" x2="19" y2="12"/>
@@ -643,8 +667,8 @@
   </section>
 
   <!-- Footer -->
-  <footer style="border-top:1px solid rgba(232,113,26,0.07);padding:32px 16px;text-align:center;">
-    <p style="font-size:0.75rem;letter-spacing:0.2em;color:#3a3530;">© 2024 RED&HeLL FAMILY — UA ONLINE</p>
+  <footer style="border-top:1px solid rgba(26,138,255,0.07);padding:32px 16px;text-align:center;">
+    <p style="font-size:0.75rem;letter-spacing:0.2em;color:#2a3040;">© 2024 Black&White FAMILY — UA ONLINE</p>
   </footer>
 </div>
 
@@ -655,16 +679,17 @@
 <div id="join-page" class="hidden" style="opacity:0;">
   <!-- BG layers -->
   <div class="bg-grid" style="position:fixed;inset:0;pointer-events:none;opacity:0.6;"></div>
+  <div class="diagonal-stripes" style="position:fixed;inset:0;pointer-events:none;"></div>
   <div class="scanlines" style="position:fixed;inset:0;pointer-events:none;"></div>
   <div style="position:fixed;inset:0;box-shadow:inset 0 0 200px rgba(0,0,0,0.9);pointer-events:none;"></div>
-  <div class="ambient-orb" style="position:fixed;width:450px;height:450px;background:#e8711a;top:30%;left:40%;"></div>
+  <div class="ambient-orb" style="position:fixed;width:450px;height:450px;background:#1a8aff;top:30%;left:40%;"></div>
 
   <!-- Particles -->
   <div id="join-particles" style="position:fixed;inset:0;pointer-events:none;"></div>
 
   <!-- Back button -->
   <button onclick="goBackToHome()"
-          style="position:fixed;top:16px;left:16px;z-index:50;display:flex;align-items:center;gap:8px;border-radius:9999px;border:1px solid rgba(232,113,26,0.2);background:rgba(18,18,18,0.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#8a8580;padding:8px 16px;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;cursor:pointer;transition:all 0.3s;">
+          style="position:fixed;top:16px;left:16px;z-index:50;display:flex;align-items:center;gap:8px;border-radius:9999px;border:1px solid rgba(26,138,255,0.2);background:rgba(14,17,24,0.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#6a7a90;padding:8px 16px;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;cursor:pointer;transition:all 0.3s;">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <line x1="19" y1="12" x2="5" y2="12"/>
       <polyline points="12 19 5 12 12 5"/>
@@ -683,49 +708,47 @@
       </div>
       <div id="join-icons" style="display:flex;align-items:center;gap:24px;">
         <!-- Crosshair -->
-        <svg class="join-icon opacity-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c08050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0;transition:all 0.7s;">
+        <svg class="join-icon opacity-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a80b4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0;transition:all 0.7s;">
           <circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/>
         </svg>
         <!-- Shield -->
-        <svg class="join-icon opacity-0" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c08050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0;transition:all 0.7s 0.1s;">
+        <svg class="join-icon opacity-0" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4a80b4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0;transition:all 0.7s 0.1s;">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
         </svg>
         <!-- Skull -->
-        <svg class="join-icon crown-icon opacity-0" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#e8711a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0;transition:all 0.7s 0.2s;">
+        <svg class="join-icon crown-icon opacity-0" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1a8aff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0;transition:all 0.7s 0.2s;">
           <circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M8 20v2h8v-2"/><path d="m12.5 17-.5-1-.5 1h1z"/><path d="M16 20a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20"/>
         </svg>
         <!-- Shield 2 -->
-        <svg class="join-icon opacity-0" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c08050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0;transition:all 0.7s 0.1s;">
+        <svg class="join-icon opacity-0" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4a80b4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0;transition:all 0.7s 0.1s;">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
         </svg>
         <!-- Crosshair 2 -->
-        <svg class="join-icon opacity-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c08050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0;transition:all 0.7s;">
+        <svg class="join-icon opacity-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a80b4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0;transition:all 0.7s;">
           <circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/>
         </svg>
       </div>
     </div>
 
     <!-- Title -->
-    <h1 id="join-title" class="join-title" style="margin-bottom:24px;text-align:center;font-size:2.75rem;font-weight:900;letter-spacing:-0.02em;color:#e0d6cc;opacity:0;transform:translateY(32px);transition:all 1s ease;">
+    <h1 id="join-title" class="join-title" style="margin-bottom:24px;text-align:center;font-size:2.75rem;font-weight:900;letter-spacing:-0.02em;color:#ccd6e8;opacity:0;transform:translateY(32px);transition:all 1s ease;">
       Ты готов стать частью<br>
-      <span style="color:#e8711a;" class="neon-glow">RED&HeLL FAMILY</span>?
+      <span style="color:var(--blue-neon);" class="neon-glow">Black&White FAMILY</span>?
     </h1>
 
     <!-- Divider -->
-    <div id="join-divider" style="margin-bottom:32px;height:1px;width:0;opacity:0;background:linear-gradient(90deg,transparent,rgba(232,113,26,0.35),transparent);transition:all 1s ease;"></div>
+    <div id="join-divider" style="margin-bottom:32px;height:1px;width:0;opacity:0;background:linear-gradient(90deg,transparent,rgba(26,138,255,0.35),transparent);transition:all 1s ease;"></div>
 
     <!-- Subtitle -->
-    <p id="join-subtitle" style="margin-bottom:48px;max-width:28rem;text-align:center;font-size:1rem;line-height:1.7;color:#8a8580;opacity:0;transform:translateY(24px);transition:all 1s ease;">
+    <p id="join-subtitle" style="margin-bottom:48px;max-width:28rem;text-align:center;font-size:1rem;line-height:1.7;color:#6a7a90;opacity:0;transform:translateY(24px);transition:all 1s ease;">
       Время сделать выбор.<br>
-      <span style="color:#d4c4b0;font-weight:600;">Одно решение — и ты в деле.</span>
+      <span style="color:#b0c0d8;font-weight:600;">Одно решение — и ты в деле.</span>
     </p>
 
     <!-- ====================================================== -->
-    <!-- 👇 ВСТАВЬ СВОЮ ССЫЛКУ НА TELEGRAM КАНАЛ СЮДА 👇        -->
-    <!-- Замени ссылку ниже на свою, например:                   -->
-    <!-- href="https://t.me/YOUR_CHANNEL_NAME"                   -->
+    <!-- 👇 ССЫЛКА НА TELEGRAM КАНАЛ Black&White FAMILY 👇       -->
     <!-- ====================================================== -->
-    <a id="join-tg-btn" href="https://t.me/RedHellFamily" target="_blank" rel="noopener noreferrer"
+    <a id="join-tg-btn" href="https://t.me/sopranos_fam1ly" target="_blank" rel="noopener noreferrer"
        class="tg-button"
        style="display:inline-flex;align-items:center;gap:12px;border-radius:12px;padding:20px 56px;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:white;opacity:0;transform:translateY(32px) scale(0.95);transition:all 1s ease;">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -735,15 +758,15 @@
     </a>
 
     <!-- Info -->
-    <p id="join-info" style="margin-top:32px;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:#6a6560;opacity:0;transition:all 1s ease 0.5s;">
+    <p id="join-info" style="margin-top:32px;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:#556078;opacity:0;transition:all 1s ease 0.5s;">
       Присоединяйся к элите
     </p>
   </div>
 
   <!-- Bottom -->
   <div style="position:relative;z-index:10;padding-bottom:32px;">
-    <div style="margin:0 auto 16px;height:1px;width:80px;background:linear-gradient(90deg,transparent,rgba(232,113,26,0.25),transparent);"></div>
-    <p style="text-align:center;font-size:0.75rem;letter-spacing:0.2em;color:#2a2520;">RED&HeLL FAMILY © 2024</p>
+    <div style="margin:0 auto 16px;height:1px;width:80px;background:linear-gradient(90deg,transparent,rgba(26,138,255,0.25),transparent);"></div>
+    <p style="text-align:center;font-size:0.75rem;letter-spacing:0.2em;color:#1a2030;">Black&White FAMILY © 2024</p>
   </div>
 </div>
 
@@ -753,24 +776,24 @@
 <!-- ============================================================ -->
 <script>
   // ==================== STATE ====================
-  let soundEnabled = true;
+  var soundEnabled = true;
 
   // ==================== PARTICLES ====================
   function createParticles(containerId, count) {
-    const container = document.getElementById(containerId);
+    var container = document.getElementById(containerId);
     if (!container) return;
-    for (let i = 0; i < count; i++) {
-      const p = document.createElement('div');
+    for (var i = 0; i < count; i++) {
+      var p = document.createElement('div');
       p.className = 'particle';
-      const size = (1.5 + Math.random() * 2.5) + 'px';
-      const opacity = 0.3 + Math.random() * 0.4;
+      var size = (1.5 + Math.random() * 2.5) + 'px';
+      var opacity = 0.3 + Math.random() * 0.4;
       p.style.left = (Math.random() * 100) + '%';
       p.style.top = (60 + Math.random() * 40) + '%';
       p.style.animationDelay = (Math.random() * 6) + 's';
       p.style.animationDuration = (5 + Math.random() * 5) + 's';
       p.style.width = size;
       p.style.height = size;
-      p.style.background = 'rgba(232,113,26,' + opacity + ')';
+      p.style.background = 'rgba(26,138,255,' + opacity + ')';
       container.appendChild(p);
     }
   }
@@ -779,39 +802,39 @@
   createParticles('welcome-particles', 30);
 
   setTimeout(function() {
-    const content = document.getElementById('welcome-content');
+    var content = document.getElementById('welcome-content');
     content.classList.remove('opacity-0');
     content.classList.add('welcome-mask-reveal');
 
-    const title = document.getElementById('welcome-main-title');
+    var title = document.getElementById('welcome-main-title');
     title.classList.remove('opacity-0');
     title.classList.add('welcome-title-reveal');
   }, 300);
 
   setTimeout(function() {
-    const sub = document.getElementById('welcome-subtitle');
+    var sub = document.getElementById('welcome-subtitle');
     sub.classList.remove('opacity-0');
     sub.classList.add('letter-spread');
 
-    const fam = document.getElementById('welcome-family');
+    var fam = document.getElementById('welcome-family');
     fam.classList.remove('opacity-0');
     fam.classList.add('welcome-fade-up');
     fam.style.animationDelay = '0.2s';
   }, 1200);
 
   setTimeout(function() {
-    const div = document.getElementById('welcome-divider');
+    var div = document.getElementById('welcome-divider');
     div.classList.remove('opacity-0');
     div.classList.add('welcome-line-expand');
 
-    const tag = document.getElementById('welcome-tagline');
+    var tag = document.getElementById('welcome-tagline');
     tag.classList.remove('opacity-0');
     tag.classList.add('welcome-fade-up');
     tag.style.animationDelay = '0.3s';
   }, 2000);
 
   setTimeout(function() {
-    const btn = document.getElementById('welcome-enter-btn');
+    var btn = document.getElementById('welcome-enter-btn');
     btn.classList.remove('opacity-0');
     btn.classList.add('welcome-fade-up');
     btn.style.animationDelay = '0.1s';
@@ -819,7 +842,7 @@
 
   // ==================== ENTER SITE ====================
   function enterSite() {
-    const welcome = document.getElementById('welcome-screen');
+    var welcome = document.getElementById('welcome-screen');
     welcome.classList.add('exiting');
     setTimeout(function() {
       welcome.classList.add('hidden');
@@ -829,7 +852,7 @@
 
   // ==================== SHOW HOME PAGE ====================
   function showHomePage() {
-    const home = document.getElementById('home-page');
+    var home = document.getElementById('home-page');
     home.classList.remove('hidden');
     setTimeout(function() { home.style.opacity = '1'; }, 50);
     initHomeObservers();
@@ -837,11 +860,11 @@
 
   // ==================== HOME OBSERVERS ====================
   function initHomeObservers() {
-    const featuresSection = document.getElementById('features-section');
-    const ctaBox = document.getElementById('cta-box');
-    const cards = document.querySelectorAll('.feature-card');
+    var featuresSection = document.getElementById('features-section');
+    var ctaBox = document.getElementById('cta-box');
+    var cards = document.querySelectorAll('.feature-card');
 
-    const observer = new IntersectionObserver(function(entries) {
+    var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           if (entry.target === featuresSection) {
@@ -861,7 +884,7 @@
     }, { threshold: 0.15 });
 
     if (featuresSection) observer.observe(featuresSection);
-    const ctaSection = document.getElementById('cta-section');
+    var ctaSection = document.getElementById('cta-section');
     if (ctaSection) observer.observe(ctaSection);
   }
 
